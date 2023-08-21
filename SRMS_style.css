@@ -294,8 +294,8 @@ img {
 
 @media(max-width:480px) {
     .top-desc {
-        font-size: 11px;
-        transform: translateY(-110%);
+        font-size: 9px;
+        /* transform: translateY(-110%); */
     }
 
     #heading {

@@ -418,6 +418,8 @@ body section.slideshow .detail .detail-item.active {
     color: white;
     text-decoration: none;
     align-items: center;
+    text-align: center;
+
 }
 
 .f-row .address svg {

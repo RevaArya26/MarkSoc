@@ -875,6 +875,14 @@ section {
     }
 }
 
+@media(max-width: 500px) {
+    .socials {
+        display: none;
+    }
+}
+
+
+
 /* 
 @media(max-width: 625px) {
     .socials #prev #next {
@@ -970,6 +978,8 @@ section {
     color: white;
     text-decoration: none;
     align-items: center;
+    text-align: center;
+
 }
 
 .f-row .address svg {

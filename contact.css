@@ -275,6 +275,7 @@ section::before {
 .container .contactinfo span {
     font-family: 'Poppins', sans-serif !important;
     font-size: 13px;
+    word-break: break-word;
 }
 
 .container .contactinfo .info {
@@ -529,6 +530,8 @@ section::before {
     color: white;
     text-decoration: none;
     align-items: center;
+    text-align: center;
+
 }
 
 .f-row .address svg {

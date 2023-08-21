@@ -291,6 +291,25 @@ button:hover {
     font-size: 11px;
 }
 
+@media(max-width: 990px) {
+    button {
+        width: 180px;
+    }
+
+}
+
+
+@media(max-width: 410px) {
+    .desc {
+        font-size: 9px;
+    }
+
+    button {
+        width: 160px;
+    }
+
+}
+
 .desc h3 {
     font-size: 16px;
 }
@@ -329,10 +348,13 @@ hr {
 }
 
 .newsletter-current {
+    display: flex;
     height: 450px;
     width: 400px;
     border-radius: 8px;
     margin: auto;
+    justify-content: center;
+
 }
 
 #slider {
@@ -341,6 +363,7 @@ hr {
     width: 90%;
     background-color: white;
     border-radius: 10px;
+    justify-content: space-around;
 }
 
 #slider figure {
@@ -408,6 +431,13 @@ hr {
     border-radius: 10px;
 }
 
+@media(max-width: 410px) {
+    .newsletter-current {
+        width: 350px;
+    }
+
+}
+
 /* footer  */
 
 .footer {
@@ -464,7 +494,8 @@ hr {
     font-size: 11px;
     color: white;
     text-decoration: none;
-    align-items: center;
+    text-align: center;
+
 }
 
 .f-row .address svg {

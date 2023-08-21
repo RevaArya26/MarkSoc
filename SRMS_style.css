@@ -1098,6 +1098,8 @@ span.text {
     color: white;
     text-decoration: none;
     align-items: center;
+    text-align: center;
+
 }
 
 .f-row .address svg {

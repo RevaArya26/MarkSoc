@@ -7,7 +7,7 @@ valueDisplays.forEach((valueDisplay) => {
 
     let duration = Math.floor(interval / end);
     let counter = setInterval(function () {
-        start += 5;
+        start += 2;
         valueDisplay.textContent = start;
         if (start == end) {
             clearInterval(counter)

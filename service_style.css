@@ -202,6 +202,8 @@ header .navbar a:hover {
 
 }
 
+
+
 .container {
     position: relative;
     display: flex;
@@ -211,6 +213,18 @@ header .navbar a:hover {
     padding: 60px 0;
     gap: 60px;
 }
+
+
+/* .container h1 {
+    margin: 20px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.7rem;
+    font-weight: 700;
+    text-align: center;
+    color: #6dbb9c;
+    text-shadow: 2px 4px 4px rgba(20, 17, 59, 0.25);
+} */
 
 .container .box {
     position: relative;
@@ -372,6 +386,129 @@ header .navbar a:hover {
     background: #10111e;
     color: var(--clr);
 }
+
+/* clients */
+
+#clients {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.d-flex-wrap {
+    display: flex;
+    -ms-flex-flow: wrap;
+    flex-flow: wrap;
+}
+
+.client-list {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 1000px;
+}
+
+.client-list li {
+    -ms-flex-preferred-size: 20%;
+    flex-basis: 16%;
+    text-align: center;
+    height: 100px;
+    list-style: none;
+}
+
+.client-list li h3 {
+    font-size: 22px;
+    color: #f0d155;
+    text-decoration: none;
+}
+
+/* .client-list li a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-bottom: 1px solid #888888;
+    border-right: 1px solid #888888;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+} */
+
+.client-list .brand-box {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    margin: auto;
+}
+
+.hover-opac-img {
+    width: 100px;
+    height: 100px;
+    object-fit: fill;
+
+}
+
+.opac-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    right: 0;
+}
+
+@media only screen and (max-width: 767px) {
+    .client-list li {
+        -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    }
+
+    .client-list {
+        width: 350px;
+        margin-top: 85px;
+    }
+}
+
+@media only screen and (max-width: 549px) {
+    .client-list li {
+        height: 90px;
+    }
+
+    .client-list .brand-box {
+        height: 90px;
+        width: 90px;
+    }
+
+    .hover-opac-img {
+        height: 90px;
+        width: 90px;
+    }
+
+    .opac-img {
+        height: 90px;
+        width: 90px;
+    }
+
+    .empty-spot::before {
+        left: 7px;
+        bottom: -8px;
+    }
+
+    .client-list li h3 {
+        font-size: 15px;
+        padding-top: 25px;
+    }
+}
+
+
 
 /* footer  */
 

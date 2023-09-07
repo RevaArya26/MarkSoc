@@ -196,7 +196,7 @@ header .navbar a:hover {
 
 /* home section */
 section {
-    padding: 2rem 9%;
+    padding: 1rem 5%;
 }
 
 .home {
@@ -220,7 +220,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
-    min-height: 100vh;
+    /* min-height: 80vh; */
     align-items: center;
 }
 
@@ -274,9 +274,112 @@ section {
     padding: 1rem 0;
 }
 
+/* stats  */
+.stats {
+
+    position: absolute;
+    width: 80vw;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    justify-content: center;
+}
+
+#stats .wrapper {
+    margin-top: 70px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.cont {
+    width: 180px;
+    height: 130px;
+    border: 3px solid #6dbb9c;
+    display: flex;
+    flex-direction: column;
+    padding: 1em 1em;
+    position: relative;
+    font-size: 16px;
+    border-radius: 0.5em;
+    background-color: transparent;
+    /* border-bottom: 10px solid #6dbb9c; */
+    margin: 0 2em;
+    justify-content: center;
+}
+
+i {
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+}
+
+/* span.num {
+    color: #fff;
+    place-items: center;
+    font-weight: 600;
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 15px;
+} */
+
+span.extend {
+    color: #fff;
+    place-items: center;
+    font-weight: 600;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+span.text {
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    pad: 0.7em 0;
+    font-weight: 500;
+    line-height: 0;
+}
+
+@media screen and (max-width:1024px) {
+
+    .cont {
+        height: 150px;
+        width: 150px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .cont {
+        width: calc(40% - 40px);
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .wrapper {
+        gap: 15px;
+    }
+
+    .cont {
+        width: 40%;
+        height: 125px;
+        font-size: 11px;
+    }
+}
+
 /* partners */
 
+
 #partners {
+    margin-top: 100px;
+
     backdrop-filter: contrast(0.8);
 }
 

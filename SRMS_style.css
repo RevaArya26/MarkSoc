@@ -934,110 +934,129 @@ span.text {
 }
 
 /* speakers */
-
-.s-container {
+.s-wrapper {
     display: flex;
-    flex-direction: column;
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+    margin: 10rem 5rem;
+    /* overflow-x: hidden; */
+}
+
+.s-wrapper i {
+    top: 50%;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+    justify-content: space-around;
+}
+
+.s-wrapper i:active {
+    transform: translateY(-50%) scale(0.85);
+}
+
+/* .s-wrapper i:first-child {
+    left: -22px;
+}
+
+.s-wrapper i:last-child {
+    right: -22px;
+} */
+
+.s-wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 12px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    cursor: grab;
+    align-self: center;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+
+.carousel :where(.card, .img) {
+    display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    margin: 40px 20px 0 20px;
-
 }
 
-.s-container .s-heading h1 {
-    margin: 10px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.9rem;
-    font-weight: 700;
-    text-align: center;
-    color: #6dbb9c;
-    text-shadow: 2px 4px 4px rgba(20, 17, 59, 0.25);
-}
-
-.s-container .s-box {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-}
-
-.s-container .s-box .col {
-    display: flex;
+.carousel .card {
+    scroll-snap-align: start;
+    height: 220px;
+    /* width: calc((100% / 4)); */
+    list-style: none;
+    background: #fff;
+    /* padding-bottom: 15px; */
     flex-direction: column;
-    width: 32.5%;
-    /* column-gap: 30px; */
+    border-radius: 8px;
 }
 
-.s-container .s-box .col img {
-    height: 250px;
-    width: 100%;
-    padding-right: 7px;
-    padding-bottom: 7px;
-    /* border-radius: 7px 7px 7px 7px; */
+.carousel .card .img {
+    background: #6dbb9c;
+    height: 155px;
+    width: 155px;
+    border-radius: 50%;
 }
 
-/* .col .text {
-    font-size: small;
-    color: white;
-    font-weight: bold;
-    opacity: 0;
-    transform: translateY(-130px);
-} */
+.card .img img {
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+}
 
-/* .col {
-    &:before {
-        content: '';
-        opacity: 0;
-        position: absolute;
-        top: 100%;
-        transition-property: top, opacity;
-    }
+.carousel .card h2 {
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 5px 0 5px;
+}
 
-    &:focus,
-    &:hover {
-
-        &:before,
-        .text {
-            opacity: 1;
-        }
-
-        &:before {
-            top: 50%;
-        }
-
-        .text {
-            top: 0;
-        }
-    }
-} */
-/* 
-.col img:hover {
-    opacity: 0.5;
-} */
+.carousel .card span {
+    color: #6A6D78;
+    font-size: 1.31rem;
+}
 
 
-
-
-@media only screen and (max-width: 769px) {
-    .s-container .s-box {
-        flex-direction: column;
-    }
-
-    .s-container .s-box .col {
-        width: 100%;
+@media screen and (max-width: 1170px) {
+    .s-wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
     }
 }
 
-@media only screen and (max-width: 643px) {
-    .s-container .s-heading {
-        margin: 20px;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 2rem;
-        font-weight: 700;
-        text-align: center;
-        color: #6dbb9c;
-        text-shadow: 2px 4px 4px rgba(20, 17, 59, 0.25);
+@media screen and (max-width: 800px) {
+    .s-wrapper .carousel {
+        grid-auto-columns: 100%;
     }
 }
 

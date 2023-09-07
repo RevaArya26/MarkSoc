@@ -230,6 +230,18 @@ img {
     text-align: justify;
 }
 
+#sub-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    top: 27%;
+    left: 50%;
+    transform: translate(-50%, 55%);
+    text-align: justify;
+}
+
 #heading {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
